@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_main"
-    tools:context=".Ui.MainActivity"
-    android:orientation="vertical">
+    tools:context="com.app.simo.madt.Ui.ProduceDetail"
+    tools:showIn="@layout/activity_produce_detail">
 
     <TextView
+        android:id="@+id/price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:textAppearance="?android:textAppearanceLarge"
         android:textColor="@color/colorPrimaryDark"
-        android:text="@string/choose"/>
+        android:text="@string/prices"/>
 
     <ListView
-        android:id="@+id/list"
+        android:id="@+id/listViewProduceDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"/>
+        android:layout_below="@+id/price"/>
 
-</LinearLayout>
+</RelativeLayout>

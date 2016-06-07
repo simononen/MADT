@@ -1,4 +1,8 @@
-package com.app.simo.madt.Produces;
+package com.app.simo.madt.ProduceDetails;
+
+/**
+ * Created by simo on 6/7/16.
+ */
 
 import com.app.simo.madt.Categories.Category;
 import com.app.simo.madt.Prices.Price;
@@ -8,7 +12,8 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Produce {
+public class ProduceDetails {
+
     @SerializedName("id")
     @Expose
     private Integer id;
@@ -32,98 +37,126 @@ public class Produce {
     private List<Price> prices = new ArrayList<Price>();
 
     /**
-     * @return The id
+     *
+     * @return
+     * The id
      */
     public Integer getId() {
         return id;
     }
 
     /**
-     * @param id The id
+     *
+     * @param id
+     * The id
      */
     public void setId(Integer id) {
         this.id = id;
     }
 
     /**
-     * @return The name
+     *
+     * @return
+     * The name
      */
     public String getName() {
         return name;
     }
 
     /**
-     * @param name The name
+     *
+     * @param name
+     * The name
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * @return The categoryId
+     *
+     * @return
+     * The categoryId
      */
     public String getCategoryId() {
         return categoryId;
     }
 
     /**
-     * @param categoryId The category_id
+     *
+     * @param categoryId
+     * The category_id
      */
     public void setCategoryId(String categoryId) {
         this.categoryId = categoryId;
     }
 
     /**
-     * @return The createdAt
+     *
+     * @return
+     * The createdAt
      */
     public String getCreatedAt() {
         return createdAt;
     }
 
     /**
-     * @param createdAt The created_at
+     *
+     * @param createdAt
+     * The created_at
      */
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
 
     /**
-     * @return The updatedAt
+     *
+     * @return
+     * The updatedAt
      */
     public String getUpdatedAt() {
         return updatedAt;
     }
 
     /**
-     * @param updatedAt The updated_at
+     *
+     * @param updatedAt
+     * The updated_at
      */
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
     }
 
     /**
-     * @return The category
+     *
+     * @return
+     * The category
      */
     public Category getCategory() {
         return category;
     }
 
     /**
-     * @param category The category
+     *
+     * @param category
+     * The category
      */
     public void setCategory(Category category) {
         this.category = category;
     }
 
     /**
-     * @return The prices
+     *
+     * @return
+     * The prices
      */
     public List<Price> getPrices() {
         return prices;
     }
 
     /**
-     * @param prices The prices
+     *
+     * @param prices
+     * The prices
      */
     public void setPrices(List<Price> prices) {
         this.prices = prices;

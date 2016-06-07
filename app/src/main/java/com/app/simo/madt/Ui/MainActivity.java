@@ -1,17 +1,20 @@
-package com.app.simo.madt;
+package com.app.simo.madt.Ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.simo.madt.Categories.Category;
 import com.app.simo.madt.Categories.CategoryAdapter;
 import com.app.simo.madt.Interface.Endpoint;
+import com.app.simo.madt.R;
 import com.app.simo.madt.RetrofitBuilder.RetrofitBuilder;
 
 import java.util.ArrayList;
@@ -71,16 +74,24 @@ public class MainActivity extends AppCompatActivity implements Callback<List<Cat
     public void onResponse(Call<List<Category>> call, Response<List<Category>> response) {
 
         ArrayList<Category> c = (ArrayList<Category>) response.body();
-        ListView listView = (ListView) findViewById(R.id.list);
-        //CategoryAdapter adapter = new CategoryAdapter(this, R.layout.category_list_item, c.);
-        //listView.setAdapter(adapter);
-
-        CategoryAdapter adapter = new CategoryAdapter(this, R.layout.category_list_item, c);
+        ListView listView = (ListView) findViewById(R.id.list);;
+        final CategoryAdapter adapter = new CategoryAdapter(this, R.layout.category_list_item, c);
         listView.setAdapter(adapter);
 
-        TextView tvprice = (TextView) findViewById(R.id.category);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent categoriesDetailsIntent = new Intent(MainActivity.this, CategoryDetail.class);
+                Category category = adapter.getItem(position);
+                int identifier = category.getId();
+                Bundle bundle = new Bundle();
+                bundle.putInt("key", identifier);
+                categoriesDetailsIntent.putExtras(bundle);
+                startActivity(categoriesDetailsIntent);
+            }
+        });
 
-        //tvprice.setText(c.getName());
+
 
 
         Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();

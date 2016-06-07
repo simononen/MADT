@@ -1,5 +1,7 @@
 package com.app.simo.madt.Prices;
 
+import com.app.simo.madt.Farmers.Farmer;
+import com.app.simo.madt.Markets.Market;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -26,6 +28,12 @@ public class Price {
     @SerializedName("updated_at")
     @Expose
     private String updatedAt;
+    @SerializedName("market")
+    @Expose
+    private Market market;
+    @SerializedName("farmer")
+    @Expose
+    private Farmer farmer;
 
     /**
      *
@@ -151,6 +159,42 @@ public class Price {
      */
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    /**
+     *
+     * @return
+     * The market
+     */
+    public Market getMarket() {
+        return market;
+    }
+
+    /**
+     *
+     * @param market
+     * The market
+     */
+    public void setMarket(Market market) {
+        this.market = market;
+    }
+
+    /**
+     *
+     * @return
+     * The farmer
+     */
+    public Farmer getFarmer() {
+        return farmer;
+    }
+
+    /**
+     *
+     * @param farmer
+     * The farmer
+     */
+    public void setFarmer(Farmer farmer) {
+        this.farmer = farmer;
     }
 
 }

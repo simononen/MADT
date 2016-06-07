@@ -1,4 +1,14 @@
 <resources>
-    <string name="app_name">Madt</string>
+    <string name="app_name">MADT</string>
     <string name="action_settings">Settings</string>
+    <string name="choose">Choose a category here</string>
+    <string name="title_activity_categories_details">CategoriesDetails</string>
+    <string name="title_activity_category_details">CategoryDetails</string>
+    <string name="title_activity_category_detail">CategoryDetail</string>
+    <string name="produce">Produce</string>
+    <string name="title_activity_produce_detail">ProduceDetail</string>
+    <string name="prices">Prices</string>
+    <string name="name">Market Name</string>
+    <string name="price">price</string>
+    <string name="farmer">Farmer</string>
 </resources>

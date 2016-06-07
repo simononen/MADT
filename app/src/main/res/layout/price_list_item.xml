@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/marketName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:text="@string/name"/>
+
+    <TextView
+        android:id="@+id/producePrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="16dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:text="@string/price"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/farmer"
+        android:id="@+id/farmer"
+        android:layout_below="@+id/marketName"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
